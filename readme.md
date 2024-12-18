@@ -39,7 +39,7 @@ Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan **co
 
 Jika Anda berencana menggunakan data ini untuk proyek lain, harap pastikan untuk mengganti dataset dengan data yang relevan dan valid. Semua data yang ada di repositori ini tidak mewakili informasi atau data dari pengguna atau sistem yang sebenarnya.
 
-## Dataset
+## Dataset dan Integrasi Kamus Multibahasa
 Dataset yang digunakan dalam proyek ini terdiri dari dua komponen utama:
 1. **Dataset Intens**: Dataset ini mencakup contoh percakapan dalam berbagai konteks yang relevan dengan aplikasi mobile, seperti logbook, profil pengguna, dan data kehadiran.
 2. **Kamus Multibahasa**: Kamus ini berisi **309 kata** yang mencakup terjemahan dan sinonim dalam bahasa Indonesia, Sunda, dan Inggris. Kamus ini digunakan untuk meningkatkan pemahaman model terhadap variasi bahasa yang digunakan oleh pengguna.
@@ -48,31 +48,6 @@ Dataset ini digunakan untuk melatih model chatbot sehingga dapat mengidentifikas
 
 ### Dataset Intens dan Kamus:
 ![Dataset Intens dan Kamus](dataset.png)  
-
-
-## Integrasi Kamus Multibahasa
-Untuk mendukung kemampuan chatbot dalam menangani bahasa campuran, kami mengembangkan **kamus multibahasa** yang mencakup **309 kata** dalam bahasa Indonesia, Sunda, dan Inggris. Kamus ini diintegrasikan dengan model untuk:
-- **Menerjemahkan pola pertanyaan** dalam bahasa Indonesia, Sunda, dan Inggris.
-- **Meningkatkan pemahaman model terhadap variasi bahasa** yang digunakan dalam interaksi sehari-hari.
-
-### Contoh Input dan Respons
-**Threshold**: Model hanya memberikan respons yang dianggap valid jika probabilitas prediksi tag lebih dari **0.75**. Prediksi dengan probabilitas lebih rendah dari 0.75 dianggap tidak valid atau tidak pasti.
-
-Berikut adalah contoh perbandingan input asli dan terjemahan, bersama dengan probabilitas dan tag yang diprediksi oleh model:
-| **No.** | **Input (Tanpa Kamus)**            | **Probabilitas (Tanpa Kamus)** | **Tag (Tanpa Kamus)** | **Terjemahan (Dengan Kamus)**             | **Probabilitas (Dengan Kamus)** | **Tag (Dengan Kamus)** |  
-|---------|-------------------------------------|---------------------------------|------------------------|---------------------------------------|---------------------------------|-------------------------|  
-| 1       | *How Carana Tingali List Logbook?*  | 0.4526                          | post_logbook            | *Gimana Cara Lihat Daftar Logbook?*   | 0.9965                          | get_logbook             |  
-| 2       | *Saha Wae Nu Telat Poe Ieu ?*      | 0.1554                          | satu_data_jabar         | *Siapa saja Yang Telat Hari Ini?*        | 0.9742                          | get_lateAttendance      |  
-| 3       | *Tampilkan embaran profile saya*   | 0.2480                          | get_users_details       | *Perlihatkan Informasi Profile Saya*     | 0.9967                          | get_users_details       |  
-
-### Penjelasan:
-1. **Input (Tanpa Kamus)**: Kalimat yang dimasukkan oleh pengguna tanpa melalui proses penerjemahan menggunakan kamus multibahasa.
-2. **Probabilitas (Tanpa Kamus)**: Probabilitas model dalam memberikan respons berdasarkan input asli tanpa bantuan kamus.
-3. **Tag (Tanpa Kamus)**: Tag yang diprediksi oleh model berdasarkan input asli.
-4. **Terjemahan (Dengan Kamus)**: Kalimat yang telah diterjemahkan atau dimodifikasi dengan menggunakan kamus multibahasa untuk meningkatkan pemahaman model terhadap variasi bahasa.
-5. **Probabilitas (Dengan Kamus)**: Probabilitas model dalam memberikan respons setelah penerjemahan dengan kamus multibahasa.
-6. **Tag (Dengan Kamus)**: Tag yang diprediksi oleh model setelah penerjemahan dan pengolahan dengan kamus multibahasa.
-
 
 ## Hasil
 
@@ -112,20 +87,63 @@ Berikut adalah contoh perbandingan input asli dan terjemahan, bersama dengan pro
 Integrasi kamus multibahasa secara signifikan meningkatkan kemampuan model dalam memahami dan merespons variasi bahasa, menghasilkan **akurasi respons yang lebih tinggi** dan **pengurangan kesalahan klasifikasi**.
 
 
-Integrasi kamus multibahasa secara signifikan meningkatkan kemampuan model dalam memahami dan merespons variasi bahasa, menghasilkan **akurasi respons yang lebih tinggi** dan **pengurangan kesalahan klasifikasi**.
-
 ### Grafik Hasil Pelatihan:
 ![Hasil Akurasi dan Loss](trainvallos.png)
 
 ### Grafik Akurasi:
 ![Hasil Akurasi](trainvallacc.png) 
 
-### Confusion Matrix:
+### Confusion Matrix dengan integrasi kamus multibahasa :
 ![Confusion Matrix](confmatrix.png)
+
+### Contoh Input dan Respons
+**Threshold**: Model hanya memberikan respons yang dianggap valid jika probabilitas prediksi tag lebih dari **0.75**. Prediksi dengan probabilitas lebih rendah dari 0.75 dianggap tidak valid atau tidak pasti.
+
+Berikut adalah contoh perbandingan input asli dan terjemahan, bersama dengan probabilitas dan tag yang diprediksi oleh model:
+| **No.** | **Input (Tanpa Kamus)**            | **Probabilitas (Tanpa Kamus)** | **Tag (Tanpa Kamus)** | **Terjemahan**             | **Probabilitas (Dengan Kamus)** | **Tag (Dengan Kamus)** |  
+|---------|-------------------------------------|---------------------------------|------------------------|---------------------------------------|---------------------------------|-------------------------|  
+| 1       | *How Carana Tingali List Logbook?*  | 0.4526                          | post_logbook            | *Gimana Cara Lihat Daftar Logbook?*   | 0.9965                          | get_logbook             |  
+| 2       | *Saha Wae Nu Telat Poe Ieu ?*      | 0.1554                          | satu_data_jabar         | *Siapa saja Yang Telat Hari Ini?*        | 0.9742                          | get_lateAttendance      |  
+| 3       | *Tampilkan embaran profile saya*   | 0.2480                          | get_users_details       | *Perlihatkan Informasi Profile Saya*     | 0.9967                          | get_users_details       |  
+
+### Penjelasan:
+1. **Input (Tanpa Kamus)**: Kalimat yang dimasukkan oleh pengguna tanpa melalui proses penerjemahan menggunakan kamus multibahasa.
+2. **Probabilitas (Tanpa Kamus)**: Probabilitas model dalam memberikan respons berdasarkan input asli tanpa bantuan kamus.
+3. **Tag (Tanpa Kamus)**: Tag yang diprediksi oleh model berdasarkan input asli.
+4. **Terjemahan**: Kalimat yang telah diterjemahkan atau dimodifikasi dengan menggunakan kamus multibahasa untuk meningkatkan pemahaman model terhadap variasi bahasa.
+5. **Probabilitas (Dengan Kamus)**: Probabilitas model dalam memberikan respons setelah penerjemahan dengan kamus multibahasa.
+6. **Tag (Dengan Kamus)**: Tag yang diprediksi oleh model setelah penerjemahan dan pengolahan dengan kamus multibahasa.
+
+Proses terjemahan meningkatkan probabilitas prediksi karena model lebih mudah memahami kata-kata yang sesuai dengan pola dalam data pelatihan. Dengan sinonim yang lebih dikenal dan struktur kalimat yang lebih sederhana, model dapat memberikan respons yang lebih akurat dan kontekstual, sehingga hasil akhir lebih relevan dan meyakinkan.
+
+## Implementasi ke Dalam Aplikasi Mobile
+
+Chatbot multibahasa yang dikembangkan telah diintegrasikan ke dalam aplikasi mobile. Integrasi ini memungkinkan pengguna untuk berinteraksi dengan chatbot secara langsung dalam aplikasi, sehingga memberikan pengalaman yang seamless dalam mengakses informasi. 
+
+**Fitur utama implementasi:**
+1. **Antarmuka Pengguna:** Tampilan yang user-friendly dengan dukungan untuk percakapan real-time.
+2. **Kemampuan Multibahasa:** Chatbot dapat memahami input dalam bahasa Indonesia, Sunda, dan Inggris.
+3. **Respons Dinamis:** Data yang dihasilkan oleh chatbot bersifat real-time dan terhubung langsung dengan backend aplikasi.
+4. **Optimasi Proses:** Penerapan model dengan dukungan kamus multibahasa memastikan kecepatan dan akurasi tinggi dalam memberikan jawaban.
+
+### Contoh Tampilan Implementasi
+
+Berikut adalah tampilan implementasi chatbot multibahasa dalam aplikasi mobile:
+
+![Implementasi Chatbot di Aplikasi Mobile](implementasi.png)
+
+### Penjelasan
+Gambar di atas menunjukkan integrasi chatbot ke dalam aplikasi mobile dengan fitur utama sebagai berikut:
+- **Input Percakapan:** Pengguna dapat mengetik pertanyaan dalam bahasa Indonesia, Sunda, atau Inggris.
+- **Output Respons:** Chatbot memberikan jawaban sesuai konteks pertanyaan dengan tingkat akurasi yang tinggi.
+- **Respons Real-Time Dinamis:** Chatbot dapat memberikan respons yang disesuaikan dengan pengguna yang login, termasuk memanfaatkan data-data operasional yang relevan milik pengguna untuk memberikan jawaban yang lebih personal dan kontekstual.
+
+Integrasi ini tidak hanya meningkatkan pengalaman pengguna tetapi juga memastikan efisiensi dalam komunikasi berbasis data di lingkungan kerja multibahasa.
+
 
 ## Kesimpulan
 Proyek ini berhasil mengembangkan **chatbot multibahasa** untuk aplikasi Mobile yang dapat menangani percakapan dalam bahasa Indonesia, Sunda, dan Inggris dengan efektif. Penggunaan **model FFNN** dan **IndoBERT** yang dipadukan dengan **kamus multibahasa** memungkinkan chatbot untuk memberikan respons yang relevan dan tepat waktu, meningkatkan efisiensi operasional dalam lingkungan kerja multibahasa.
 
 Integrasi kamus multibahasa terbukti memberikan **peningkatan akurasi yang signifikan**, memungkinkan chatbot untuk memahami dan merespons variasi bahasa pengguna dengan lebih baik. Hasil pengujian menunjukkan bahwa model yang menggunakan kamus multibahasa mampu mencapai **akurasi sebesar 91,49%**, jauh lebih baik dibandingkan dengan model tanpa kamus yang hanya mencapai **67,02%**.
 
-Dengan penerapan teknologi ini, diharapkan aplikasi Mobile dapat lebih optimal dalam mendukung interaksi pengguna dari berbagai latar belakang bahasa, serta meningkatkan produktivitas dan efektivitas dalam pengambilan keputusan yang berbasis data.
+Dengan penerapan teknologi ini, diharapkan aplikasi mobile dapat lebih optimal dalam mendukung interaksi pengguna dari berbagai latar belakang bahasa, serta meningkatkan produktivitas dan efektivitas dalam pengambilan keputusan yang berbasis data.
