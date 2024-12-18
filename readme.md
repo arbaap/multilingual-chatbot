@@ -21,12 +21,12 @@ Dataset yang digunakan dalam proyek ini terdiri dari dua komponen utama:
 Dataset ini digunakan untuk melatih model chatbot sehingga dapat mengidentifikasi berbagai macam pertanyaan dan memberikan respons yang sesuai dalam berbagai bahasa. Selain itu, dataset juga memastikan bahwa chatbot dapat menangani percakapan dalam konteks multibahasa tanpa kehilangan akurasi.
 
 ![Dataset Intens dan Kamus](dataset.png)  
-*Gambar: Dataset Intens dan Kamus yang Digunakan untuk Pelatihan Model*
 
-## Disclaimer
-**<span style="color:red">Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan <b>contoh</b> dan <b>bukan data asli</b>. Data ini digunakan semata-mata untuk tujuan demonstrasi dan pengembangan model chatbot multibahasa. Pengguna tidak disarankan untuk menggunakan data ini untuk tujuan lain selain pengembangan dan pembelajaran.</span>**
+## **DISCLAIMER**
+<span style="color:red">Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan **contoh** dan **bukan data asli**. Data ini digunakan semata-mata untuk tujuan demonstrasi dan pengembangan model chatbot multibahasa. Pengguna tidak disarankan untuk menggunakan data ini untuk tujuan lain selain pengembangan dan pembelajaran.</span>
 
-Jika Anda berencana menggunakan data ini untuk proyek lain, harap pastikan untuk mengganti dataset dengan data yang relevan dan valid. Semua data yang ada di repositori ini tidak mewakili informasi atau data dari pengguna atau sistem yang sebenarnya.
+<span style="color:red">Jika Anda berencana menggunakan data ini untuk proyek lain, harap pastikan untuk mengganti dataset dengan data yang relevan dan valid. Semua data yang ada di repositori ini tidak mewakili informasi atau data dari pengguna atau sistem yang sebenarnya.</span>
+
 
 
 
@@ -77,16 +77,14 @@ Berikut adalah contoh perbandingan input asli dan terjemahan, bersama dengan pro
 Integrasi kamus multibahasa secara signifikan meningkatkan kemampuan model dalam memahami dan merespons variasi bahasa, menghasilkan **akurasi respons yang lebih tinggi** dan **pengurangan kesalahan klasifikasi**.
 
 ### Grafik Hasil Pelatihan:
-<img src="trainvallos.png" alt="Hasil Akurasi dan Loss" style="float:left; width:45%; margin-right:10px;">  
-*Gambar: Hasil Akurasi dan Loss Model dengan Kamus Multibahasa*
+![Hasil Akurasi dan Loss](trainvallos.png)
 
 ### Grafik Akurasi:
-<img src="trainvallacc.png" alt="Hasil Akurasi" style="float:right; width:45%; margin-left:10px;">  
-*Gambar: Grafik Akurasi Model dengan Kamus Multibahasa*
+![Hasil Akurasi](trainvallacc.png) 
 
 ### Confusion Matrix:
-![Confusion Matrix](confmatrix.png)  
-*Gambar: Confusion Matrix Model dengan Kamus Multibahasa*
+![Confusion Matrix](confmatrix.png) 
+
 
 
 ## Kesimpulan
