@@ -14,10 +14,25 @@ Chatbot ini dirancang untuk:
 - Meningkatkan efisiensi operasional dengan memberikan respons yang relevan dan tepat waktu.
 
 ## Metodologi
-Proyek ini mengikuti metodologi **CRISP-DM** (Cross-Industry Standard Process for Data Mining), yang terdiri dari tahapan berikut:
-1. **Data Preparation**: Dataset dibersihkan dan diproses menggunakan teknik seperti *case folding*, *stop word removal*, *stemming*, dan tokenisasi.
-2. **Modeling**: Model **FFNN** dikembangkan dengan representasi **IndoBERT**, kemudian ditingkatkan dengan integrasi kamus multibahasa.
-3. **Deployment**: Chatbot diintegrasikan dengan aplikasi mobile, memungkinkan pengguna untuk mengakses data secara real-time.
+Proyek ini mengikuti metodologi **CRISP-DM** (Cross-Industry Standard Process for Data Mining), yang terdiri dari enam tahapan utama sebagai berikut:
+
+1. **Business Understanding**  
+   Identifikasi kebutuhan pengguna DigiTeam untuk meningkatkan operasional pekerjaan melalui chatbot multibahasa yang responsif dan akurat.
+
+2. **Data Understanding**  
+   Pengumpulan data dari pertanyaan pengguna yang meliputi topik seperti manajemen proyek dan status tugas, dengan keberagaman bahasa (Indonesia, Inggris, Sunda).
+
+3. **Data Preparation**  
+   Pembersihan data dengan *case folding*, *stop word removal*, *stemming*, *tokenisasi*, dan integrasi kamus multibahasa untuk memperkaya pemahaman model.
+
+4. **Modeling**  
+   Pengembangan model **FFNN** dan **IndoBERT**, dilatih dengan 80% data pelatihan dan 20% data pengujian, menggunakan optimizer **Adam** dan **cross-entropy loss**.
+
+5. **Evaluation**  
+   Evaluasi model dengan metrik akurasi, presisi, recall, dan F1-score, baik dengan maupun tanpa integrasi kamus multibahasa.
+
+6. **Deployment**  
+   Integrasi model chatbot ke dalam aplikasi DigiTeam menggunakan pendekatan Agile untuk pengembangan iteratif dan akses data real-time dan dinamis.
 
 # PERINGATAN !!!
 Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan **contoh** dan **bukan data asli**. Data ini digunakan semata-mata untuk tujuan demonstrasi dan pengembangan model chatbot multibahasa. Pengguna tidak disarankan untuk menggunakan data ini untuk tujuan lain selain pengembangan dan pembelajaran.
