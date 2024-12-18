@@ -1,12 +1,12 @@
 # Chatbot Multibahasa untuk DigiTeam
 
 ## Deskripsi
-Proyek ini bertujuan untuk mengembangkan **chatbot multibahasa** untuk aplikasi **DigiTeam** dengan menggunakan model **Feed Forward Neural Network (FFNN)** dan **IndoBERT**. Chatbot ini mengintegrasikan **kamus multibahasa** untuk mendukung interaksi dalam **bahasa Indonesia, Sunda, dan Inggris**, memberikan respons yang cepat dan akurat. 
+Proyek ini bertujuan untuk mengembangkan **chatbot multibahasa** untuk aplikasi **Mobile** dengan menggunakan model **Feed Forward Neural Network (FFNN)** dan **IndoBERT**. Chatbot ini mengintegrasikan **kamus multibahasa** untuk mendukung interaksi dalam **bahasa Indonesia, Sunda, dan Inggris**, memberikan respons yang cepat dan akurat. 
 
 **Fitur Utama:**
 - Integrasi kamus multibahasa yang memungkinkan chatbot untuk memahami dan merespons dalam tiga bahasa.
 - Penggunaan model FFNN dan IndoBERT untuk meningkatkan pemahaman konteks kalimat.
-- Implementasi dalam aplikasi DigiTeam untuk memberikan akses informasi secara real-time.
+- Implementasi dalam aplikasi DigiTeam untuk memberikan akses informasi secara real-time dan data respons yang dikeluarkan dinamis karena terhubung dengan backend aplikasi.
 
 ## Tujuan
 Chatbot ini dirancang untuk:
@@ -20,12 +20,14 @@ Dataset yang digunakan dalam proyek ini terdiri dari dua komponen utama:
 
 Dataset ini digunakan untuk melatih model chatbot sehingga dapat mengidentifikasi berbagai macam pertanyaan dan memberikan respons yang sesuai dalam berbagai bahasa. Selain itu, dataset juga memastikan bahwa chatbot dapat menangani percakapan dalam konteks multibahasa tanpa kehilangan akurasi.
 
-![Dataset Intens dan Kamus](dataset.png) *(Gambar: Dataset Intens dan Kamus yang Digunakan untuk Pelatihan Model)*
+![Dataset Intens dan Kamus](dataset.png)  
+*Gambar: Dataset Intens dan Kamus yang Digunakan untuk Pelatihan Model*
 
 ## Disclaimer
-Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan **contoh** dan **bukan data asli**. Data ini digunakan semata-mata untuk tujuan demonstrasi dan pengembangan model chatbot multibahasa. Pengguna tidak disarankan untuk menggunakan data ini untuk tujuan lain selain pengembangan dan pembelajaran.
+**<span style="color:red">Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan <b>contoh</b> dan <b>bukan data asli</b>. Data ini digunakan semata-mata untuk tujuan demonstrasi dan pengembangan model chatbot multibahasa. Pengguna tidak disarankan untuk menggunakan data ini untuk tujuan lain selain pengembangan dan pembelajaran.</span>**
 
 Jika Anda berencana menggunakan data ini untuk proyek lain, harap pastikan untuk mengganti dataset dengan data yang relevan dan valid. Semua data yang ada di repositori ini tidak mewakili informasi atau data dari pengguna atau sistem yang sebenarnya.
+
 
 
 ## Metodologi
@@ -42,11 +44,11 @@ Untuk mendukung kemampuan chatbot dalam menangani bahasa campuran, kami mengemba
 ### Contoh Input dan Respons
 Berikut adalah contoh perbandingan input asli dan terjemahan, bersama dengan probabilitas dan tag yang diprediksi oleh model:
 
-| **No.** | **Input (Tanpa Kamus)**            | **Probabilitas (Tanpa Kamus)** | **Tag (Tanpa Kamus)** | **Input (Dengan Kamus)**             | **Probabilitas (Dengan Kamus)** | **Tag (Dengan Kamus)** |  
+| **No.** | **Input (Tanpa Kamus)**            | **Probabilitas (Tanpa Kamus)** | **Tag (Tanpa Kamus)** | **Terjemahan (Dengan Kamus)**             | **Probabilitas (Dengan Kamus)** | **Tag (Dengan Kamus)** |  
 |---------|-------------------------------------|---------------------------------|------------------------|---------------------------------------|---------------------------------|-------------------------|  
-| 1       | *How Carana Tingali List Logbook?*  | 0.4526                          | post_logbook            | *How Carana Tingali List Logbook?*   | 0.9965                          | get_logbook             |  
-| 2       | *Saha Wae Nu Telat Poe Ieu ?*      | 0.1554                          | satu_data_jabar         | *Saha Wae Nu Telat Poe Ieu ?*        | 0.9742                          | get_lateAttendance      |  
-| 3       | *Tampilkan embaran profile saya*   | 0.2480                          | get_users_details       | *Tampilkan embaran profile saya*     | 0.9967                          | get_users_details       |  
+| 1       | *How Carana Tingali List Logbook?*  | 0.4526                          | post_logbook            | *Gimana Cara Lihat Daftar Logbook?*   | 0.9965                          | get_logbook             |  
+| 2       | *Saha Wae Nu Telat Poe Ieu ?*      | 0.1554                          | satu_data_jabar         | *Siapa saja Yang Telat Hari Ini?*        | 0.9742                          | get_lateAttendance      |  
+| 3       | *Tampilkan embaran profile saya*   | 0.2480                          | get_users_details       | *Perlihatkan Informasi Profile Saya*     | 0.9967                          | get_users_details       |  
 
 ### Penjelasan:
 1. **Input (Tanpa Kamus)**: Kalimat yang dimasukkan oleh pengguna tanpa melalui proses penerjemahan menggunakan kamus multibahasa.
@@ -75,14 +77,21 @@ Berikut adalah contoh perbandingan input asli dan terjemahan, bersama dengan pro
 Integrasi kamus multibahasa secara signifikan meningkatkan kemampuan model dalam memahami dan merespons variasi bahasa, menghasilkan **akurasi respons yang lebih tinggi** dan **pengurangan kesalahan klasifikasi**.
 
 ### Grafik Hasil Pelatihan:
-![Hasil Akurasi dan Loss](trainvallos.png) *(Gambar: Hasil Akurasi dan Loss Model dengan Kamus Multibahasa)*
+<img src="trainvallos.png" alt="Hasil Akurasi dan Loss" style="float:left; width:45%; margin-right:10px;">  
+*Gambar: Hasil Akurasi dan Loss Model dengan Kamus Multibahasa*
 
 ### Grafik Akurasi:
-![Hasil Akurasi](trainvallacc.png) *(Gambar: Grafik Akurasi Model dengan Kamus Multibahasa)*
+<img src="trainvallacc.png" alt="Hasil Akurasi" style="float:right; width:45%; margin-left:10px;">  
+*Gambar: Grafik Akurasi Model dengan Kamus Multibahasa*
 
 ### Confusion Matrix:
-![Confusion Matrix](confmatrix.png) *(Gambar: Confusion Matrix Model dengan Kamus Multibahasa)*
+![Confusion Matrix](confmatrix.png)  
+*Gambar: Confusion Matrix Model dengan Kamus Multibahasa*
 
 
+## Kesimpulan
+Proyek ini berhasil mengembangkan **chatbot multibahasa** untuk aplikasi DigiTeam yang dapat menangani percakapan dalam bahasa Indonesia, Sunda, dan Inggris dengan efektif. Penggunaan **model FFNN** dan **IndoBERT** yang dipadukan dengan **kamus multibahasa** memungkinkan chatbot untuk memberikan respons yang relevan dan tepat waktu, meningkatkan efisiensi operasional dalam lingkungan kerja multibahasa.
 
+Integrasi kamus multibahasa terbukti memberikan **peningkatan akurasi yang signifikan**, memungkinkan chatbot untuk memahami dan merespons variasi bahasa pengguna dengan lebih baik. Hasil pengujian menunjukkan bahwa model yang menggunakan kamus multibahasa mampu mencapai **akurasi sebesar 91,49%**, jauh lebih baik dibandingkan dengan model tanpa kamus yang hanya mencapai **67,02%**.
 
+Dengan penerapan teknologi ini, diharapkan aplikasi DigiTeam dapat lebih optimal dalam mendukung interaksi pengguna dari berbagai latar belakang bahasa, serta meningkatkan produktivitas dan efektivitas dalam pengambilan keputusan yang berbasis data.
