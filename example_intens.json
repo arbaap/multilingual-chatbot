@@ -1,0 +1,136 @@
+{
+  "intents": [
+    {
+      "tag": "halo",
+      "patterns": ["Halo", "Hi", "Hai", "Haloo", "Haii", "Hii"],
+      "responses": ["Haloo, ada yang bisa dibantu?"]
+    },
+    {
+      "tag": "pagi",
+      "patterns": ["Selamat Pagi", "Pagi"],
+      "responses": ["Selamat Pagi, ada yang ingin Anda tanyakan?"]
+    },
+    {
+      "tag": "siang",
+      "patterns": ["Selamat Siang", "Siang"],
+      "responses": ["Selamat Siang, ada yang ingin Anda tanyakan?"]
+    },
+    {
+      "tag": "sore",
+      "patterns": ["Selamat Sore", "Sore"],
+      "responses": ["Selamat Sore, ada yang ingin Anda tanyakan?"]
+    },
+    {
+      "tag": "malam",
+      "patterns": ["Selamat Malam", "Malam"],
+      "responses": ["Selamat Malam, ada yang ingin Anda tanyakan?"]
+    },
+    {
+      "tag": "salam",
+      "patterns": [
+        "Assalamualaikum",
+        "Salam",
+        "Assalamualaikum warahmatullahi wabarakatuh",
+        "Permisi"
+      ],
+      "responses": [
+        "Waalaikumussalam, silahkan tanyakan apa yang Anda ingin ketahui."
+      ]
+    },
+    {
+      "tag": "apa_kabar",
+      "patterns": [
+        "Apa kabar?",
+        "Gimana kabarnya?",
+        "Gimana kabarmu?",
+        "Bagaimana kabarmu?"
+      ],
+      "responses": ["Saya baik, terima kasih. Bagaimana dengan Anda?"]
+    },
+    {
+      "tag": "siapa_nama",
+      "patterns": [
+        "Siapa namamu?",
+        "Boleh tahu nama kamu?",
+        "Namamu siapa?",
+        "Nama kamu siapa?",
+        "Siapa Anda"
+      ],
+      "responses": [
+        "Saya adalah DigiBot, asisten virtual yang siap membantu menjawab pertanyaan Anda seputar Jabar Digital Service untuk manajemen proyek, logbook, profil, dan berbagai informasi lainnya."
+      ]
+    },
+    {
+      "tag": "bantuan",
+      "patterns": [
+        "Bisa bantu?",
+        "Boleh minta tolong?",
+        "Butuh bantuan",
+        "Bisa dibantu?"
+      ],
+      "responses": ["Tentu saja! Apa yang bisa saya bantu?"]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": ["Terima kasih", "Makasih"],
+      "responses": ["Sama-sama, senang bisa membantu!"]
+    },
+    {
+      "tag": "selamat_tinggal",
+      "patterns": ["Selamat tinggal", "Dadah", "Sampai jumpa"],
+      "responses": ["Sampai jumpa lagi, semoga hari Anda menyenangkan!"]
+    },
+    {
+      "tag": "kabar",
+      "patterns": [
+        "Bagaimana kabar hari ini?",
+        "Ada kabar apa hari ini?",
+        "Apa yang terjadi hari ini?"
+      ],
+      "responses": ["Semua baik-baik saja, bagaimana dengan Anda?"]
+    },
+    {
+      "tag": "jds",
+      "patterns": [
+        "Jabar Digital Service",
+        "JDS",
+        "Apa itu JDS?",
+        "Informasi tentang JDS",
+        "Apa maksud dari Jabar Digital Service?",
+        "Jabar Digital Service itu apa ya?",
+        "JDS tujuannya apa?",
+        "Apa kegunaan JDS?",
+        "JDS bermanfaat untuk apa?"
+      ],
+      "responses": [
+        "Jabar Digital Service (JDS) Unit Pelaksana Teknis Pengelola Layanan Digital, Data, dan Informasi Geospasial adalah sebuah unit di bawah Dinas Komunikasi dan Informatika Provinsi Jawa Barat yang dicita-citakan dapat mempersempit kesenjangan digital, membantu efisiensi dan akurasi."
+      ]
+    },
+    {
+      "tag": "lokasi",
+      "patterns": [
+        "Dimana Lokasi JDS",
+        "Lokasi JDS",
+        "Tempat JDS berada",
+        "Alamat JDS",
+        "JDS di mana ya?",
+        "Lokasi kantor JDS dimana?",
+        "Lokasi JDS berada di mana?",
+        "Gedung JDS di kota mana?",
+        "JDS berada di gedung apa?"
+      ],
+      "responses": [
+        "Jabar Digital Service berada di Jabar Command Center (Gedung Setda B Lt II) Jalan Diponegoro Nomor 22 Bandung Jawa Barat 40115"
+      ]
+    },
+    {
+      "tag": "get_users_details",
+      "patterns": [
+        "Info profile saya",
+        "Informasi akun saya",
+        "Tampilkan informasi profile saya"
+      ],
+      "responses": ["get_users_details"]
+    }
+  ]
+}

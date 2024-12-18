@@ -1,0 +1,58 @@
+{
+  "Pagi": {
+    "Inggris": "morning",
+    "Sunda": ["enjing", "isuk"]
+  },
+  "Siang": {
+    "Inggris": ["afternoon"],
+    "Sunda": ["siang", "beurang"]
+  },
+  "Sore": {
+    "Inggris": "sore",
+    "Sunda": ["sonten"]
+  },
+  "Malam": {
+    "Inggris": "night",
+    "Sunda": ["peuting", "weungi"]
+  },
+  "Salam": {
+    "Inggris": "greeting",
+    "Sunda": "punten"
+  },
+  "Apa": {
+    "Inggris": "what",
+    "Sunda": "naon"
+  },
+  "kabar": {
+    "Inggris": "how are you",
+    "Sunda": ["kumaha damang", "damang"]
+  },
+  "Gimana": {
+    "Inggris": "how",
+    "Sunda": "kumaha"
+  },
+  "kabarnya": {
+    "Inggris": "how are you",
+    "Sunda": "kumaha damang"
+  },
+  "Bagaimana": {
+    "Inggris": "how",
+    "Sunda": "kumaha"
+  },
+  "Siapa": {
+    "Inggris": "who",
+    "Sunda": "saha"
+  },
+  "namamu": {
+    "Inggris": "your name",
+    "Sunda": "nami anjeun"
+  },
+  "Boleh": {
+    "Inggris": "yes",
+    "Sunda": "sumuhun"
+  },
+  "tahu": {
+    "Inggris": "know",
+    "Sunda": ["nyaho", "apal", "terang"]
+  }
+}
