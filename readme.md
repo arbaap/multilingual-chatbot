@@ -20,14 +20,13 @@ Dataset yang digunakan dalam proyek ini terdiri dari dua komponen utama:
 
 Dataset ini digunakan untuk melatih model chatbot sehingga dapat mengidentifikasi berbagai macam pertanyaan dan memberikan respons yang sesuai dalam berbagai bahasa. Selain itu, dataset juga memastikan bahwa chatbot dapat menangani percakapan dalam konteks multibahasa tanpa kehilangan akurasi.
 
+### Dataset Intens dan Kamus:
 ![Dataset Intens dan Kamus](dataset.png)  
 
-## **DISCLAIMER**
-<span style="color:red">Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan **contoh** dan **bukan data asli**. Data ini digunakan semata-mata untuk tujuan demonstrasi dan pengembangan model chatbot multibahasa. Pengguna tidak disarankan untuk menggunakan data ini untuk tujuan lain selain pengembangan dan pembelajaran.</span>
+# PERINGATAN !!
+Harap dicatat bahwa data yang terdapat dalam repository ini hanya merupakan **contoh** dan **bukan data asli**. Data ini digunakan semata-mata untuk tujuan demonstrasi dan pengembangan model chatbot multibahasa. Pengguna tidak disarankan untuk menggunakan data ini untuk tujuan lain selain pengembangan dan pembelajaran.
 
-<span style="color:red">Jika Anda berencana menggunakan data ini untuk proyek lain, harap pastikan untuk mengganti dataset dengan data yang relevan dan valid. Semua data yang ada di repositori ini tidak mewakili informasi atau data dari pengguna atau sistem yang sebenarnya.</span>
-
-
+Jika Anda berencana menggunakan data ini untuk proyek lain, harap pastikan untuk mengganti dataset dengan data yang relevan dan valid. Semua data yang ada di repositori ini tidak mewakili informasi atau data dari pengguna atau sistem yang sebenarnya.
 
 
 ## Metodologi
